@@ -12,11 +12,11 @@ const caesarModule = (function () {
     // Wrap the shift
 
     if (!encode) {
-      return caesar(input, shift - (shift * 2));
+      shift = shift * -1
     }
 
     if (shift < 0) {
-      return caesar(input, shift + 26);
+      shift = shift + 26
     }
 
     const msg = input.toLowerCase()
